@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react';
 // Example: base: '/paradise-nursery/'
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/paradise-nursery/',
 });
