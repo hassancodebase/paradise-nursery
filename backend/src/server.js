@@ -8,6 +8,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import plantRoutes from './routes/plantRoutes.js';
+import authRoutes from './routes/authRoutes.js';
 
 dotenv.config();
 
@@ -30,6 +31,9 @@ app.get('/api/health', (req, res) => {
 
 // Plant API routes
 app.use('/api/plants', plantRoutes);
+
+// Authentication API routes
+app.use('/api/auth', authRoutes);
 
 // Start server only after database connection
 const startServer = async () => {
